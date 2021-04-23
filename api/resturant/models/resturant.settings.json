@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "resturants",
+  "info": {
+    "name": "resturant"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "categories": {
+      "via": "resturants",
+      "collection": "category"
+    }
+  }
+}
